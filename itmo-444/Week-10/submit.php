@@ -41,7 +41,7 @@ $s3 = new Aws\S3\S3Client([
 //$client->waitUntilBucketExists(array('Bucket' => $bucket));
 $bucket="jrh-544-raw-bucket";
 
-$key = $uploadfile;
+$key = $_FILES['userfile']['name'];
 
 $result = $s3->putObject([
     'Bucket' => $bucket,
